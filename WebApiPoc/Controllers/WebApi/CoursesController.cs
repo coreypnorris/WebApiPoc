@@ -4,8 +4,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using WebApiPoc.Core.Enums;
 using WebApiPoc.Core.Models;
+using WebApiPoc.Persistence.Entities;
 using WebApiPoc.Persistence.Interfaces;
 
 namespace WebApiPoc.Controllers
@@ -21,7 +21,7 @@ namespace WebApiPoc.Controllers
 
         [HttpGet]
         [Route("Online")]
-        public IEnumerable<CourseModel> GetOnlineCourses()
+        public IEnumerable<CourseEntity> GetOnlineCourses()
         {
             return _unitOfWork.Courses.GetOnlineCourses();
         }

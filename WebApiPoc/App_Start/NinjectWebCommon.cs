@@ -66,7 +66,7 @@ namespace WebApiPoc.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<ISchema>().To<Schema>();
+            kernel.Bind<IDbContext>().To<DbContext>();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
         }        
     }

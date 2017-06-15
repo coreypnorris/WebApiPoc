@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using WebApiPoc.Persistence.Enums;
 
-namespace WebApiPoc.Core.Models
+namespace WebApiPoc.Persistence.Entities
 {
-    public class CourseModel
+    public class CourseEntity
     {
         public string Name { get; set; }
         public CourseType Type { get; set; }

@@ -191,15 +191,17 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WebApi\CoursesController.cs" />
-    <Compile Include="Core\Enums\CourseType.cs" />
+    <Compile Include="Persistence\Enums\CourseType.cs" />
     <Compile Include="Core\Models\CourseModel.cs" />
     <Compile Include="Core\Repositories\CourseRepository.cs" />
     <Compile Include="Core\Repositories\Interfaces\ICourseRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Persistence\Entities\CourseEntity.cs" />
     <Compile Include="Persistence\Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Persistence\Interfaces\ISchema.cs" />
+    <Compile Include="Persistence\Interfaces\IDbContext.cs" />
+    <Compile Include="Persistence\DbContext.cs" />
     <Compile Include="Persistence\Schema.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

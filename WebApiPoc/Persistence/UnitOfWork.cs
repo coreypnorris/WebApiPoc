@@ -12,12 +12,12 @@ namespace WebApiPoc.Persistence
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public ISchema Schema { get; private set; }
+        public IDbContext Schema { get; private set; }
         public ICourseRepository Courses { get; private set; }
 
         public UnitOfWork()
         {
-            Schema = new Schema();
+            Schema = new DbContext();
             Courses = new CourseRepository(Schema.GetSchema());
         }
 
