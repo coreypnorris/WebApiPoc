@@ -18,9 +18,9 @@ namespace WebApiPoc.Core.Repositories
             _schema = schema;
         }
 
-        public IEnumerable<CourseEntity> GetOnlineCourses()
+        public IEnumerable<CourseModel> GetOnlineCourses()
         {
-            return _schema.Courses.Where(c => c.Type == CourseType.Online);
+            return _schema.Courses.Where(c => c.Type == CourseType.Online).Select(c => new CourseModel(c));
         }
     }
 }

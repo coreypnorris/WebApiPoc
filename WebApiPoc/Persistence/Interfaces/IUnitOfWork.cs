@@ -8,7 +8,7 @@ namespace WebApiPoc.Persistence.Interfaces
 {
     public interface IUnitOfWork
     {
-        IDbContext Schema { get; }
+        IDbContext DbContext { get; }
         ICourseRepository Courses { get; }
         void Complete();
     }

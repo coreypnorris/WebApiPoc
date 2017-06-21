@@ -9,6 +9,6 @@ namespace WebApiPoc.Core.Repositories.Interfaces
 {
     public interface ICourseRepository
     {
-        IEnumerable<CourseEntity> GetOnlineCourses();
+        IEnumerable<CourseModel> GetOnlineCourses();
     }
 }

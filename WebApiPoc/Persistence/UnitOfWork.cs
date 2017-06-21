@@ -12,13 +12,13 @@ namespace WebApiPoc.Persistence
 {
     public class UnitOfWork : IUnitOfWork
     {
-        public IDbContext Schema { get; private set; }
+        public IDbContext DbContext { get; private set; }
         public ICourseRepository Courses { get; private set; }
 
         public UnitOfWork()
         {
-            Schema = new DbContext();
-            Courses = new CourseRepository(Schema.GetSchema());
+            DbContext = new DbContext();
+            Courses = new CourseRepository(DbContext.GetSchema());
         }
 
         public void Complete()
@@ -27,7 +27,7 @@ namespace WebApiPoc.Persistence
             using (StreamWriter file = File.CreateText(jsonFile))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, Schema.GetSchema());
+                serializer.Serialize(file, DbContext.GetSchema());
             }
         }
     }

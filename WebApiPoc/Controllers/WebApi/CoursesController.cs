@@ -21,7 +21,7 @@ namespace WebApiPoc.Controllers
 
         [HttpGet]
         [Route("Online")]
-        public IEnumerable<CourseEntity> GetOnlineCourses()
+        public IEnumerable<CourseModel> GetOnlineCourses()
         {
             return _unitOfWork.Courses.GetOnlineCourses();
         }
